@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bangkit.mysamplerecord"
+    android:installLocation="auto">
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/Theme.MySampleRecord"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.provider.MediaStore.RECORD_SOUND" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.RecorderService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.simplemobiletools.voicerecorder.action.GET_RECORDER_INFO" />
+                <action android:name="com.simplemobiletools.voicerecorder.action.STOP_AMPLITUDE_UPDATE" />
+                <action android:name="com.simplemobiletools.voicerecorder.action.TOGGLE_PAUSE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

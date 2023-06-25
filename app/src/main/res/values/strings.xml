@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MySampleRecord</string>
+
+    <string name="m4a">m4a</string>
+    <string name="mp3">mp3</string>
+    <string name="ogg">ogg</string>
+    <string name="ogg_opus">ogg (Opus)</string>
+    <string name="bitrate_value">%d kbps</string>
+
+    <string name="recording_saved_successfully">Recording saved successfully</string>
+    <string name="recording">Recording</string>
+    <string name="no_recordings_found">No recordings created by this app\nhave been found</string>
+    <string name="no_recordings_in_folder_found">No recordings have been found\nin the selected folder</string>
+    <string name="paused">Paused</string>
+    <string name="recorder">Recorder</string>
+    <string name="player">Player</string>
+</resources>
