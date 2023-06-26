@@ -14,4 +14,8 @@
     <string name="paused">Paused</string>
     <string name="recorder">Recorder</string>
     <string name="player">Player</string>
+    <string name="by">by</string>
+
+    <string name="time_start">0:00</string>
+    <string name="default_text">-</string>
 </resources>
